@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Операции с дробями</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        .fraction {
+            padding-right: 10px;
+        }
+
+        .buttons_container {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
+
+        .input_buttons {
+            margin: 8px;
+        }
+
+    </style>
+</head>
+<body>
+<form action="/operationsFractions">
+    <div class="container">
+        <div class="fraction">
+            <div style="text-align: center; padding-bottom: 10px">ДРОБЬ №1</div>
+            <div>
+                <input style="text-align: center; width: 100px" type="number" name="numerator1" placeholder="Числитель" required>
+            </div>
+            <div>--------------------</div>
+            <div>
+                <input style="text-align: center; width: 100px" type="number" name="denominator1" placeholder="Знаменатель" required>
+            </div>
+        </div>
+        <div class="fraction">
+            <div style="text-align: center; padding-bottom: 10px">ДРОБЬ №2</div>
+            <div>
+                <input style="text-align: center; width: 100px" type="number" name="numerator2" placeholder="Числитель" required>
+            </div>
+            <div>--------------------</div>
+            <div>
+                <input style="text-align: center; width: 100px" type="number" name="denominator2" placeholder="Знаменатель" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons_container">
+        <div class="input_buttons">
+            <button onclick="location.href='/operationsFractions'" style="margin-top: 10px; width: 40px" type="submit" name="operation" value="+">+</button>
+        </div>
+        <div class="input_buttons">
+            <button onclick="location.href='/operationsFractions'" style="margin-top: 10px; width: 40px" type="submit" name="operation" value="-">-</button>
+        </div>
+        <div class="input_buttons">
+            <button onclick="location.href='/operationsFractions'" style="margin-top: 10px; width: 40px" type="submit" name="operation" value="*">*</button>
+        </div>
+        <div class="input_buttons">
+            <button onclick="location.href='/operationsFractions'" style="margin-top: 10px; width: 40px" type="submit" name="operation" value="/">/</button>
+        </div>
+    </div>
+
+    <p th:text="${answer}"></p>
+    <a style="margin-top: 10px;" href="/">Выйти в меню</a>
+
+</form>
+</body>
+</html>

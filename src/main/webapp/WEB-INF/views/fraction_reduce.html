@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сокращение дроби</title>
+</head>
+<body>
+<h3>Сокращение дроби</h3>
+<form action="/reduceFraction">
+    <div>
+        <input style="text-align: center; width: 100px" type="number" name="numerator" placeholder="Числитель" required>
+    </div>
+    <div>--------------------</div>
+    <div>
+        <input style="text-align: center; width: 100px" type="number" name="denominator" placeholder="Знаменатель" required>
+    </div>
+    <div>
+        <input style="margin-top: 10px; width: 108px" type="submit" value="Сократить">
+    </div>
+    <p th:text="${answer}"></p>
+    <a style="margin-top: 10px;" href="/">Выйти в меню</a>
+</form>
+</body>
+</html>
